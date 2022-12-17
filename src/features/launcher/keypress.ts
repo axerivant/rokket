@@ -7,6 +7,9 @@ const onShortcutPress = (callback: Function) => {
 
 	window.addEventListener('keydown', (ev: KeyboardEvent) => {
 		const key = ev.key
+
+		if (key !== shift && key !== control && key !== slash) return
+
 		pressedKeys.add(key)
 
 		if (
